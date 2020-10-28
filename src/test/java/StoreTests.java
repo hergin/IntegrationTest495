@@ -1,5 +1,6 @@
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.easymock.EasyMock;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -20,6 +21,16 @@ public class StoreTests {
         myStore.addItem(item1);
         myStore.addItem(item2);
         myStore.addItem(item3);
+
+        ItemPriceService mockService = EasyMock.createMock(ItemPriceService.class);
+
+        EasyMock.expect(mockService.getPrice(item1)).andReturn(8.0).anyTimes();
+        EasyMock.expect(mockService.getPrice(item2)).andReturn(4.0).anyTimes();
+        EasyMock.expect(mockService.getPrice(item3)).andReturn(9.0).anyTimes();
+
+        EasyMock.replay(mockService);
+
+        myStore.setItemPriceService(mockService);
     }
 
     @Test

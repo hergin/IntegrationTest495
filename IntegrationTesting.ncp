@@ -1,0 +1,61 @@
+<Project>
+  <Name>IntegrationTesting</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.ClassDiagram" assembly="NClass.DiagramEditor, Version=2.8.0.1, Culture=neutral, PublicKeyToken=null">
+    <Name>Store</Name>
+    <Language>Java</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Store</Name>
+        <Access>Public</Access>
+        <Location left="467" top="217" />
+        <Size width="208" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public void getInventoryValue()</Member>
+        <Member type="Method">public Item getTheMostExpensiveItem()</Member>
+        <Member type="Method">public void getTheCheapestItem()</Member>
+        <Member type="Method">public List&lt;double&gt; getAllPrices()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Item</Name>
+        <Access>Public</Access>
+        <Location left="851" top="217" />
+        <Size width="163" height="128" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">String name</Member>
+        <Member type="Field">int quantity</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>ItemPriceService</Name>
+        <Access>Public</Access>
+        <Location left="480" top="484" />
+        <Size width="180" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">double getPrice(Item item)</Member>
+      </Entity>
+    </Entities>
+    <Containers />
+    <Relationships>
+      <Relationship type="Association" first="0" second="1">
+        <Label>items</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="0" second="2">
+        <Label>itemPriceService</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>

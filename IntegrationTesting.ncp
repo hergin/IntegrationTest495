@@ -10,9 +10,9 @@
         <Location left="467" top="217" />
         <Size width="208" height="145" />
         <Collapsed>False</Collapsed>
-        <Member type="Method">public void getInventoryValue()</Member>
+        <Member type="Method">public double getInventoryValue()</Member>
         <Member type="Method">public Item getTheMostExpensiveItem()</Member>
-        <Member type="Method">public void getTheCheapestItem()</Member>
+        <Member type="Method">public Item getTheCheapestItem()</Member>
         <Member type="Method">public List&lt;double&gt; getAllPrices()</Member>
         <Modifier>None</Modifier>
       </Entity>
